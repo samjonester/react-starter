@@ -7,26 +7,26 @@
 
 ### Development
 ```
-npm run setup
+npm install
 npm start
 open http://localhost:3000
 ```
 
 ### Bundling for Production
 ```
-npm run setup
+npm install
 npm run bundle
 ```
 
 ### Linting
 ```
-npm run setup
+npm install
 npm run lint
 ```
 
 ### Testing
 ```
-npm run setup
+npm install
 npm test
 ```
 
@@ -48,3 +48,8 @@ npm test
 * [eslint](https://github.com/eslint/eslint) for linting
 * [react](https://github.com/facebook/react)
 	* [react-dom](https://github.com/facebook/react/tree/master/packages/react-dom) for the react entry point
+* [karma](https://github.com/karma-runner/karma) test runner
+	* [jasmine](https://github.com/jasmine/jasmine) test framework
+	* [phantomjs](https://github.com/ariya/phantomjs/) headless browser for testing
+	* [karma-spec-reporter](https://github.com/mlex/karma-spec-reporter) test reporting
+	* [karma-coverage](https://github.com/karma-runner/karma-coverage) coverage reporting
