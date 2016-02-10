@@ -1,9 +1,8 @@
 # React Starter Project
+[![Build Status](https://travis-ci.org/samlawrencejones/react-starter.svg?branch=master)](https://travis-ci.org/samlawrencejones/react-starter)
 
 ## Adapted From
 [react-hot-boilerplate](https://github.com/samlawrencejones/react-hot-boilerplate)
-
-[![Build Status](https://travis-ci.org/samlawrencejones/react-starter.svg?branch=master)](https://travis-ci.org/samlawrencejones/react-starter)
 
 ## Usage
 
