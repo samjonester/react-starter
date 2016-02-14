@@ -6,7 +6,8 @@
     "start": "NODE_ENV=development node server.js",
     "lint": "node_modules/eslint/bin/eslint.js src",
     "build": "node_modules/webpack/bin/webpack.js",
-		"test": "node_modules/karma/bin/karma start --single-run --no-auto-watch karma.conf.js"
+		"test": "node_modules/karma/bin/karma start --single-run --no-auto-watch karma.conf.js",
+		"travis": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
