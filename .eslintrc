@@ -16,7 +16,7 @@
     "quotes": [1, "single", "avoid-escape"],
     "strict": [2, "never"],
 		"no-extra-semi": 2,
-		"semi": [2, "always", { "omitLastInOneLineBlock": true}],
+		"semi": [2, "never"],
 		"comma-dangle": [2, "never"],
 		"no-func-assign": 1,
 		"no-unreachable": 2,
