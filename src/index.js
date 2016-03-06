@@ -1,6 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.scss';
+import React from 'react'
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import store from './store'
+import Todos from './components/todos'
+
+let reactElement = document.getElementById('root')
+
+render(
+  <Provider store={store}>
+    <Todos />
+  </Provider>,
+  reactElement
+)

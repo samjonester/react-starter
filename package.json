@@ -63,6 +63,8 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "immutable": "^3.7.6",
+    "ramda": "^0.19.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.4.0",
