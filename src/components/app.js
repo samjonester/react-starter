@@ -3,6 +3,7 @@ import Paper from 'material-ui/lib/paper'
 import AppBar from 'material-ui/lib/app-bar'
 
 import AddTodo from '../containers/AddTodo'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
 export default class App extends React.Component {
   render() {
@@ -14,13 +15,13 @@ export default class App extends React.Component {
             showMenuIconButton={false}
           />
           <Paper style={{
-            height: '80%',
             width: '100%',
             padding: 50,
             textAlign: 'center'
           }} zDepth={1}
           rounded={false}>
           <AddTodo /> 
+          <VisibleTodoList />
         </Paper>
       </div>
     </div>
