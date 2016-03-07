@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "immutable": "^3.7.6",
+    "material-ui": "^0.15.0-alpha.1",
     "ramda": "^0.19.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",

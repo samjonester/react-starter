@@ -1,3 +1,20 @@
 h1 {
 	color: blue;
 }
+
+body {
+  background-color: #ccc;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.body {
+  width: 80%;
+  margin: 10px;
+}

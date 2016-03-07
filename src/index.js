@@ -1,15 +1,16 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
+import {createStore} from 'redux'
 
-import store from './store'
-import Todos from './components/todos'
+import './index.scss'
+import App from './components/app'
+//import todoApp from './reducers'
 
 let reactElement = document.getElementById('root')
+//let store = createStore(todoApp)
 
 render(
-  <Provider store={store}>
-    <Todos />
-  </Provider>,
+  <App />,
   reactElement
 )
