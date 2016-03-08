@@ -4,6 +4,7 @@ import AppBar from 'material-ui/lib/app-bar'
 
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
+import Footer from '../components/Footer'
 
 export default class App extends React.Component {
   render() {
@@ -21,6 +22,7 @@ export default class App extends React.Component {
           }} zDepth={1}
           rounded={false}>
           <AddTodo /> 
+          <Footer />
           <VisibleTodoList />
         </Paper>
       </div>

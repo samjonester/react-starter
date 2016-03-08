@@ -32,6 +32,7 @@ let AddTodo = ({dispatch}) => {
         let todoVal = input.getValue()
         if (todoVal.trim()) {
           dispatch(addTodo(todoVal))
+          input.input.value=''
         }
       }}>
       <TextField
@@ -39,12 +40,14 @@ let AddTodo = ({dispatch}) => {
         style={{
           width: 450
         }}
-        multiLine={true}
         ref={node => {
           input = node
         }}
       />
-      <RaisedButton label="Add" type="submit" />
+      <RaisedButton label="Add" 
+        type="submit" 
+        primary={true}
+      />
     </form>
   </Card>
   )
