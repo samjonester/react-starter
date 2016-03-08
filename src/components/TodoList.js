@@ -1,18 +1,35 @@
 import React, {PropTypes} from 'react'
 import List from 'material-ui/lib/lists/list'
-import ListItem from 'material-ui/lib/lists/list-item'
 
-//import Todo from './Todo'
+import Todo from './Todo'
 
 const TodoList = ({todos, onTodoClick}) => (
-  <div>
-    <List>
-      <ListItem
-        primaryText="Item 1" />
-      <ListItem
-        primaryText="Item 2" />
-    </List>
-  </div>
+  <div style={{
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
+  }}>
+    <List style={{
+      width: 550
+    }}>
+      {todos.map(todo =>
+       <Todo 
+         key={todo.id}
+         {...todo}
+         onClick={() => onTodoClick(todo.id)}
+       />
+     )}
+     </List>
+   </div>
 )
+
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    completed: PropTypes.bool.isRequired,
+    text: PropTypes.string.isRequired
+  }).isRequired).isRequired,
+  onTodoClick: PropTypes.func.isRequired
+}
 
 export default TodoList

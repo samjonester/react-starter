@@ -23,7 +23,7 @@
 		"complexity": [2, 7],
 		"curly": [2, "multi-line"],
 		"no-alert": 2,
-		"no-console": 2,
+		"no-console": 1,
 		"no-implicit-globals": 2,
 		"no-return-assign": 2,
 		"no-delete-var": 2,

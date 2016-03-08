@@ -6,47 +6,49 @@ import TextField from 'material-ui/lib/text-field'
 import RaisedButton from 'material-ui/lib/raised-button'
 import Divider from 'material-ui/lib/divider'
 
-//import {addTodo} from '../actions'
+import {addTodo} from '../actions'
 
 let AddTodo = ({dispatch}) => {
   let input
+
   return (
     <Card style={{
       width: 560, 
       margin: '0 auto'
     }}>
-      <CardHeader
-        title="Add an Item"
-      />
-      <form 
-        style={{
-          width: 450,
-          padding: 50,
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
-        onSubmit={e => {
-        if (!input.value.trim()) {
-          return
+    <CardHeader
+      title="Add an Item"
+    />
+    <form 
+      style={{
+        width: 450,
+        padding: 50,
+        textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column'
+      }}
+      onSubmit={e => {
+        e.preventDefault()
+        let todoVal = input.getValue()
+        if (todoVal.trim()) {
+          dispatch(addTodo(todoVal))
         }
-        dispatch(addTodo(input.value))
-        input.value = ''
       }}>
       <TextField
         hintText="Todo"
         style={{
           width: 450
         }}
+        multiLine={true}
         ref={node => {
           input = node
         }}
       />
-      <RaisedButton label="Add" />
-  </form>
-</Card>
+      <RaisedButton label="Add" type="submit" />
+    </form>
+  </Card>
   )
 }
 
-//AddTodo = connect()(AddTodo)
+AddTodo = connect()(AddTodo)
 export default AddTodo

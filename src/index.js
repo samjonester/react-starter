@@ -5,12 +5,14 @@ import {createStore} from 'redux'
 
 import './index.scss'
 import App from './components/app'
-//import todoApp from './reducers'
+import todoApp from './reducers'
 
 let reactElement = document.getElementById('root')
-//let store = createStore(todoApp)
+let store = createStore(todoApp)
 
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   reactElement
 )
