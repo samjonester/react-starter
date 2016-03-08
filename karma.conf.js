@@ -7,10 +7,10 @@ module.exports = function (config) {
     singleRun: true,
     frameworks: [ 'jasmine' ],
     files: [
-      'src/**/*spec.js' //just load this file, it loads all specs
+      'src/**/*[sS]pec.js' //just load this file, it loads all specs
     ],
     preprocessors: {
-      'src/**/*spec.js': [ 'webpack' ] //preprocess with webpack and our sourcemap loader
+      'src/**/*[sS]pec.js': [ 'webpack' ] //preprocess with webpack and our sourcemap loader
     },
 		reporters: [ 'spec', 'coverage' ],
 		coverageReporter: {

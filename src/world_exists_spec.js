@@ -1,5 +1,5 @@
-describe('tests run', function() {
-	it('passes', function() {
+describe('tests run', () => {
+	it('passes', () => {
 		expect(true).toBe(true)
 	})
 })
