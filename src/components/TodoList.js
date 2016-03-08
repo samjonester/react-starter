@@ -1,7 +1,18 @@
 import React, {PropTypes} from 'react'
+import R from 'ramda'
 import List from 'material-ui/lib/lists/list'
 
 import Todo from './Todo'
+
+const createTodo = (onTodoClick) => (todo) => {
+  return (
+    <Todo 
+      key={todo.id}
+      {...todo}
+      onClick={() => onTodoClick(todo.id)}
+    />
+  )
+}
 
 const TodoList = ({todos, onTodoClick}) => (
   <div style={{
@@ -12,15 +23,9 @@ const TodoList = ({todos, onTodoClick}) => (
     <List style={{
       width: 550
     }}>
-      {todos.map(todo =>
-       <Todo 
-         key={todo.id}
-         {...todo}
-         onClick={() => onTodoClick(todo.id)}
-       />
-     )}
-     </List>
-   </div>
+    {R.map(createTodo(onTodoClick))(todos)}
+    </List>
+  </div>
 )
 
 TodoList.propTypes = {
