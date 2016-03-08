@@ -1,3 +1,5 @@
+import R from 'ramda'
+
 import {ACTION_TYPES} from '../actions'
 
 const todo = (state, action) => {
@@ -13,9 +15,7 @@ const todo = (state, action) => {
         return state
       }
 
-      return Object.assign({}, state, {
-        completed: !state.completed
-      })
+      return R.merge(state, {completed: !state.completed})
 
     default:
       return state
