@@ -1,7 +1,6 @@
 import expect from 'expect'
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import R from 'ramda'
 
 import TodoList from './TodoList'
 
@@ -36,7 +35,7 @@ describe('todo list component', () => {
       text: 'world'
     }
     
-    const {props, output} = setup([todo1, todo2])
+    const {output} = setup([todo1, todo2])
 
     let outputTodos = output.props.children.props.children
     expect(outputTodos.length).toEqual(2)
